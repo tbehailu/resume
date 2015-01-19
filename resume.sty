@@ -1,0 +1,202 @@
+\usepackage[usenames]{color}
+\usepackage{fullpage,amsmath,amssymb,enumitem,multicol,xcolor}
+
+\textwidth=6.7in
+\topmargin=-.75in
+\textheight=11in
+
+\raggedright
+
+\thispagestyle{empty} 
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Definitions %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newenvironment{changemargin}[2]{%
+  \begin{list}{}{%
+    \setlength{\topsep}{0pt}%
+    \setlength{\leftmargin}{#1}%
+    \setlength{\rightmargin}{#2}%
+    \setlength{\listparindent}{\parindent}%
+    \setlength{\itemindent}{\parindent}%
+    \setlength{\parsep}{\parskip}%
+  }%
+  \item[]}{\end{list}
+}
+
+\newcommand{\lineover}{
+	\begin{changemargin}{-0.05in}{-0.05in}
+		\vspace*{-8pt}
+		\hrulefill \\
+		\vspace*{-2pt}
+	\end{changemargin}
+}
+
+\newcommand{\header}[1]{
+    \vspace{5pt}
+	\begin{changemargin}{-0.4in}{-0.5in}
+		\scshape{#1}\\
+  	\lineover
+	\end{changemargin}
+	\vspace{5pt}
+}
+
+\newcommand{\name}[5]{
+	\begin{changemargin}{-0.5in}{-0.5in}
+		\begin{center}
+			{\Huge \scshape {\textbf{#1}}}\\ \smallskip
+			{\url{#2}}\\ \smallskip 
+			{#3}\\ \smallskip
+		\end{center}
+	\end{changemargin}
+}
+
+%\name{\textbf{TSION BEHAILU}}
+%{\url{www.tsion.me}}
+%{tsionbehailu@gmail.com $\bullet$ 404.944.5352}
+
+\newcommand{\tab}[1]{\hspace{.05\textwidth}}
+
+\newenvironment{body} {
+	\vspace*{-9pt}
+	\begin{changemargin}{-0.25in}{-0.5in}
+  }	
+	{\end{changemargin}
+}	
+
+
+\newenvironment{position} {
+	\vspace*{-4pt}
+	\begin{changemargin}{-0.25in}{-0.5in}
+  }	
+	{\end{changemargin}
+}
+
+
+\newcommand{\school}[3]{
+	\textbf{#1} \hfill \emph{#2\\}
+	#3\\
+}
+
+\newcommand{\jobentry}[4]{
+\textbf{#1} - % JOB 1 HERE
+\emph{#2} % Company, City, State
+\hfill 
+\emph{#3}\\ % October 2014 - Present
+\vspace*{-4pt}
+\begin{itemize} 
+\itemsep -0pt
+  \item #4
+\end{itemize}
+}
+
+% \textbf {Information Communications Technologies (ICT) Development for Sub-Saharan Farmers} 
+% %\emph{Berkeley,CA} 
+% \hfill 
+% \emph{August 2014 - Present}
+% \url{www.tsionbehailu.me/research}
+% \vspace*{-4pt}
+% \begin{itemize}
+%   \itemsep -2pt
+%   \item[] Advisor: Prof. Tapan Parikh, School of Information
+%   \item Designing ICTs to Increase Smallholder Farmers' Access to Markets and Knowledge. Identify needs and defines opportunities through innovative ICT-based applications and systems which can increase agricultural small-holder productivity, profitability, and sustainability
+%    \item Funded by NSF, CRA-W, CDC
+% \end{itemize}
+
+\newcommand{\research}[6]{
+\textbf{#1}
+\hfill 
+\emph{#2}\\
+\url{#3}
+\vspace*{-4pt}
+\begin{itemize} 
+\itemsep -0pt
+	\item[] #4
+    \item #5
+    \item #6
+\end{itemize}
+}
+
+\newcommand{\project}[4]{
+\textbf{#1}
+\hfill 
+\emph{#2}\\
+\url{#3}
+\vspace*{-4pt}
+\begin{itemize} 
+\itemsep -0pt
+  \item #4
+\end{itemize}
+}
+
+\newcommand{\projectnolink}[3]{
+\textbf{#1}
+\hfill 
+\emph{#2}\\
+\vspace*{-4pt}
+\begin{itemize} 
+\itemsep -0pt
+  \item #3
+\end{itemize}
+}
+
+\newcommand{\activity}[5]{
+\textbf{#1}
+\emph{#2}
+\hfill 
+\emph{#3}\\
+% \vspace*{-5pt}
+\url{#4}
+\begin{itemize}[label=\hfill]
+  \item #5
+\end{itemize}
+}
+
+\newcommand{\activitynorole}[3]{
+\textbf{#1}
+\hfill 
+\emph{#2}\\
+\vspace*{-5pt}
+\begin{itemize}[label=\hfill]
+  \item #3
+\end{itemize}
+}
+
+\newcommand{\activitynolink}[4]{
+\textbf{#1}
+\emph{#2}
+\hfill 
+\emph{#3}\\
+\begin{itemize}[label=\hfill]
+  \item #4
+\end{itemize}
+}
+\newcommand{\activitysimple}[3]{
+\textbf{#1}
+\emph{#2}
+\hfill 
+\emph{#3}\\
+}
+
+
+\newcommand{\coursework}[9]{
+\begin{multicols}{3}
+  \begin{itemize}
+    \itemsep -2pt
+    \item #1
+    \item #2
+    \item #3
+    \item #4
+    \item #5
+    \item #6
+    \item #7
+    \item #8
+    \item #9
+  \end{itemize}
+\end{multicols}
+}
+
+%%%%%%%%%%%%%% CREDITS %%%%%%%%%%%%%%%%%%%%%%%
+% Made by Tsion Behailu (www.tsion.me) & Vania Speedy (www.http://ivansmirnov.name/)
