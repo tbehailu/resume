@@ -180,20 +180,36 @@
 \emph{#3}\\
 }
 
+%% The following is a hack to get more than 9 arguments in the coursework section.
+\newcommand\coursework[9]{
+    \def\tempa{#1}
+    \def\tempb{#2}
+    \def\tempc{#3}
+    \def\tempd{#4}
+    \def\tempe{#5}
+    \def\tempf{#6}
+    \def\tempg{#7}
+    \def\temph{#8}
+    \def\tempi{#9}
+    \cwcontinued
+}
 
-\newcommand{\coursework}[9]{
+\newcommand{\cwcontinued}[3]{
 \begin{multicols}{3}
   \begin{itemize}
     \itemsep -2pt
+    \item \tempa
+    \item \tempb
+    \item \tempc
+    \item \tempd
+    \item \tempe
+    \item \tempf
+    \item \tempg
+    \item \temph
+    \item \tempi
     \item #1
     \item #2
     \item #3
-    \item #4
-    \item #5
-    \item #6
-    \item #7
-    \item #8
-    \item #9
   \end{itemize}
 \end{multicols}
 }
